@@ -1,0 +1,15 @@
+<div>
+	<h2>Please enter your last name below to reveal my new number.</h2>
+	<h4>If you are an alwell you must enter our last name and Uncle Hughs second sons first name. With no spaces.</h4>
+	<input #credentials type="text" name="credentials">
+	<button (click)="submitName(credentials.value)">Reveal Number</button>
+
+	<div *ngIf="isValid">
+		<h4>Hello Family or Friend!</h4>
+		<h5> My New Number is: 848-228-9124</h5>
+		<h6>Please Shoot me a text with your name so I can save your number. Cheers</h6>
+	</div>
+	<div *ngIf="noFriend">
+		<h4>Hello unfortunately your name was not on the list, this may very well be a mistake though! Please reach out if you feel this is you.</h4>
+	</div>
+</div>
